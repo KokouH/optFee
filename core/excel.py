@@ -12,22 +12,6 @@ def get_if_exist(tag: str, di: dict):
     return None
 
 
-def name_by_chain(chain):
-    match chain:
-        case 'arb':
-            return "Arbitrum"
-        case 'eth':
-            return "Ethereum"
-        case 'opt':
-            return "Optimism"
-        case 'ftm':
-            return "Fantom"
-        case 'matic':
-            return "Polygon"
-        case 'zk':
-            return "ZkSync"
-
-
 def create_tables_by_accounts(accounts, bookName):
     wb = openpyxl.Workbook()
 

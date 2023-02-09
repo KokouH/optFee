@@ -66,17 +66,16 @@ class TokensTransByAddrContract():
 
 
     def get_by_chain_name(self, chain_name):
-        match (chain_name):
-            case 'arb':
-                return self.ARBITRUM
-            case 'eth':
-                return self.ETHEREUM
-            case 'matic':
-                return self.POLYGON
-            case 'ftm':
-                return self.FANTOM
-            case 'opt':
-                return self.OPTIMISM
+        if chain_name == 'arb':
+            return self.ARBITRUM
+        if chain_name == 'eth':
+            return self.ETHEREUM
+        if chain_name == 'matic':
+            return self.POLYGON
+        if chain_name == 'ftm':
+            return self.FANTOM
+        if chain_name == 'opt':
+            return self.OPTIMISM
 
 class NFTsTransByAddrContract():
     BASE_STR = 'module=account&action=tokennfttx&contractaddress={}&address={}&page=1&offset=10000&startblock=0&endblock=99999999&sort=desc&apikey='
@@ -88,16 +87,16 @@ class NFTsTransByAddrContract():
 
 
     def get_by_chain_name(self, chain_name):
-        match (chain_name):
-            case 'arb':
-                return self.ARBITRUM
-            case 'eth':
-                return self.ETHEREUM
-            case 'matic':
-                return self.POLYGON
-            case 'ftm':
-                return self.FANTOM
-            case 'opt':
-                return self.OPTIMISM
+        if chain_name == 'arb':
+            return self.ARBITRUM
+        if chain_name == 'eth':
+            return self.ETHEREUM
+        if chain_name == 'matic':
+            return self.POLYGON
+        if chain_name == 'ftm':
+            return self.FANTOM
+        if chain_name == 'opt':
+            return self.OPTIMISM
+
 
 
